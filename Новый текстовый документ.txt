@@ -1,0 +1,78 @@
+задание 1)
+
+#include <iostream>
+int main() {
+	std::cout <<"Hello, world!\n"<<std:: endl;
+	return 0;
+}
+=====================================================
+Задание 2)
+
+#include <iostream>
+
+using namespace std;
+
+int main () {
+int count_of_words = 0;
+string previous;
+cin >> previous;
+string current;
+while (cin >> current) {
+++count_of_words;
+if (previous == current)
+cout << "Word " << previous << " is repeating on position " << count_of_words << '\n';
+}
+return 0;
+}
+=====================================================
+Задание 3)
+
+#include <iostream>
+using namespace std;
+
+int main (){
+    cout << "Enter a number:\n";
+    int number;
+    cin >> number;
+    int i = 0;
+    int digit = number;
+    int rest = 1;
+    while (digit >= 1 && rest <= 1){
+        rest = digit % 10;
+        digit = digit / 10;
+        i = i + 1;
+    }
+    int two = 1;
+    int sum = 0;
+    digit = number;
+    while (i > 0){
+        rest = digit % 10;
+        digit = digit / 10;
+        sum = sum + rest * two;
+        two = two * 2;
+        i = i - 1;
+    }
+    cout << sum;
+    return 0;
+}
+=====================================================
+Задание 4)
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+    int num10=0, num2=0, razryad=1;
+    cout << "Enter a number:" << endl;
+    cin >> num10;
+    while(num10)
+    {
+        num2 +=(num10%2)* razryad;
+        num10=num10/2;
+        razryad = razryad*10;
+    }
+    cout << num2;
+    return 0;
+}
